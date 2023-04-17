@@ -20,7 +20,7 @@ public class Abc {
 	 
  }
  
- @Test(dataprovider=dp)
+ @Test(dataProvider="dp")
  public void Test(String a, String b, String c, String d, String e) 
  {
 	 driver.findElement(By.name("Gender")).click();
@@ -34,12 +34,12 @@ public class Abc {
  }
 public Object[][] dp()
 {
-Object obj=new Object[1][5]
-        obj[0][1]="Roshan";
-	obj[0][2]="Aware";
-	obj[0][3]="Roshan123@gmail.com";
+Object[][] obj=new Object[1][4] ;
+    obj[0][0]="Roshan";
+	obj[0][1]="Aware";
+	obj[0][2]="Roshan123@gmail.com";
+	obj[0][3]="123456";
 	obj[0][4]="123456";
-	obj[0][5]="123456";
 	
      return  obj;
 }
