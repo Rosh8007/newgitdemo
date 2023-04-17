@@ -20,17 +20,27 @@ public class Abc {
 	 
  }
  
- @Test
- public void Test() 
+ @Test(dataprovider=dp)
+ public void Test(String a, String b, String c, String d, String e) 
  {
 	 driver.findElement(By.name("Gender")).click();
-	 driver.findElement(By.name("FirstName")).sendKeys("Roshan");
-	 driver.findElement(By.name("LastName")).sendKeys("Aware");
-	 driver.findElement(By.name("Email")).sendKeys("Roshan123@gmail.com");
-	 driver.findElement(By.name("Password")).sendKeys("123456");
-	 driver.findElement(By.name("ConfirmPassword")).sendKeys("123456");
+	 driver.findElement(By.name("FirstName")).sendKeys(a);
+	 driver.findElement(By.name("LastName")).sendKeys(b);
+	 driver.findElement(By.name("Email")).sendKeys(c);
+	 driver.findElement(By.name("Password")).sendKeys(d);
+	 driver.findElement(By.name("ConfirmPassword")).sendKeys(e);
 	 driver.findElement(By.name("register-button")).click();
 	 
  }
-
+public Object[][] dp()
+{
+Object obj=new Object[1][5]
+        obj[0][1]="Roshan";
+	obj[0][2]="Aware";
+	obj[0][3]="Roshan123@gmail.com";
+	obj[0][4]="123456";
+	obj[0][5]="123456";
+	
+     return  obj;
+}
 }
